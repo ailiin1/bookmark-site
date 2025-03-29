@@ -1,195 +1,567 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Navigation</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AI 创业导航站</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Smart Navigation</h1>
-            <p class="subtitle">Curated Quality Website Directory</p>
-        </header>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">AI 创业导航</div>
+            <div class="nav-links">
+                <a href="#ai-tools">AI 工具</a>
+                <a href="#startup">创业资源</a>
+                <button class="theme-toggle">🌙</button>
+            </div>
+        </nav>
+    </header>
 
-        <main>
-            <section class="category">
-                <h2>AI Tools</h2>
-                <div class="links-grid">
-                    <a href="https://www.doubao.com/" class="link-card">
-                        <span class="link-title">豆包</span>
-                        <span class="link-desc">你的 AI 朋友</span>
-                    </a>
-                    <a href="https://kimi.moonshot.cn/" class="link-card">
-                        <span class="link-title">Kimi.ai</span>
-                        <span class="link-desc">帮你看更大的世界</span>
-                    </a>
-                    <a href="https://wenxin.baidu.com/ernie-vilg" class="link-card">
-                        <span class="link-title">文心大模型</span>
-                        <span class="link-desc">产业级知识增强大模型</span>
-                    </a>
-                    <a href="https://chat.openai.com/auth/login" class="link-card">
-                        <span class="link-title">ChatGPT</span>
-                        <span class="link-desc">OpenAI</span>
-                    </a>
-                    <a href="https://www.notion.so/product/ai" class="link-card">
-                        <span class="link-title">Notion AI</span>
-                        <span class="link-desc">Work faster. Write better. Think bigger.</span>
-                    </a>
-                    <a href="https://yiyan.baidu.com/" class="link-card">
-                        <span class="link-title">文心一言</span>
-                        <span class="link-desc">百度AI对话</span>
-                    </a>
-                    <a href="https://xinghuo.xfyun.cn/" class="link-card">
-                        <span class="link-title">讯飞星火</span>
-                        <span class="link-desc">科大讯飞认知大模型</span>
-                    </a>
-                    <a href="https://www.liblibai.com/" class="link-card">
-                        <span class="link-title">LiblibAI</span>
-                        <span class="link-desc">中国领先的AI创作平台</span>
-                    </a>
-                    <a href="https://www.aishort.top/" class="link-card">
-                        <span class="link-title">AiShort</span>
-                        <span class="link-desc">ChatGPT 快捷指令表</span>
-                    </a>
-                    <a href="https://qihao.tishi.top/" class="link-card">
-                        <span class="link-title">AI起号</span>
-                        <span class="link-desc">AI 实战商业落地</span>
-                    </a>
-                    <div class="more-links" style="display: none;">
-                        <a href="https://www.liblib.ai/" class="link-card">
-                            <span class="link-title">LiblibAI</span>
-                            <span class="link-desc">AI创作平台</span>
-                        </a>
-                        <a href="https://novelai.dev/" class="link-card">
-                            <span class="link-title">NovelAI</span>
-                            <span class="link-desc">AI创作工具</span>
-                        </a>
-                        <a href="https://www.tishi.top/" class="link-card">
-                            <span class="link-title">AI提示语</span>
-                            <span class="link-desc">提示语社区</span>
-                        </a>
-                        <a href="https://www.deepseek.com/" class="link-card">
-                            <span class="link-title">DeepSeek</span>
-                            <span class="link-desc">深度求索</span>
-                        </a>
-                        <a href="https://manus.im/" class="link-card">
-                            <span class="link-title">Manus</span>
-                            <span class="link-desc">AI工具</span>
-                        </a>
-                        <a href="https://tongyi.aliyun.com/" class="link-card">
-                            <span class="link-title">通义</span>
-                            <span class="link-desc">阿里云AI助手</span>
-                        </a>
-                        <a href="https://claude.ai/new" class="link-card">
-                            <span class="link-title">Claude</span>
-                            <span class="link-desc">Anthropic AI助手</span>
-                        </a>
-                    </div>
-                    <button class="more-button" onclick="toggleMore(this)">Show More</button>
+    <!-- 主要内容区 -->
+    <main>
+        <!-- 搜索区域 -->
+        <section class="search-section">
+            <h1>发现优质 AI 工具与创业资源</h1>
+            <div class="search-box">
+                <input type="text" placeholder="搜索工具或资源...">
+                <button>搜索</button>
+            </div>
+        </section>
+
+        <!-- AI 工具分类 -->
+        <section id="ai-tools" class="section">
+            <h2>AI 工具</h2>
+            <div class="category-grid">
+                <!-- 大模型与通用AI平台 -->
+                <div class="category-card">
+                    <h3>大模型与通用AI</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.doubao.com/" target="_blank" data-description="抖音旗下多模态AI助手，支持对话、搜索、创作、代码生成">豆包</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://tongyi.aliyun.com/" target="_blank" data-description="阿里云大模型，覆盖智能对话、代码生成、创意辅助">通义千问</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://yiyan.baidu.com/" target="_blank" data-description="百度知识增强大模型，支持企业级NLP与多模态应用">文心一言</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://chat.openai.com" target="_blank" data-description="OpenAI对话模型，覆盖编程、创作、数据分析等全场景">ChatGPT</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://claude.ai/new" target="_blank" data-description="Anthropic长文本处理专家，支持逻辑推理与安全对话">Claude 3.5</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://xinghuo.xfyun.cn/" target="_blank" data-description="科大讯飞中文大模型，聚焦教育、办公、代码生成">讯飞星火</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.deepseek.com/" target="_blank" data-description="深度求索开源大模型，支持长上下文与数学推理">DeepSeek</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://chatglm.cn/" target="_blank" data-description="清华系大模型，多轮对话、代码生成、知识库问答">智谱清言</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://tiangong.kunlunai.com/" target="_blank" data-description="昆仑万维大模型，支持文档解析、创意写作、多模态交互">天工AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://混元大模型.qq.com/" target="_blank" data-description="腾讯自研大模型，覆盖智能客服、内容生成、数据分析">腾讯混元大模型</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://ai.360.cn/" target="_blank" data-description="360认知型大模型，支持安全问答、多语言翻译、逻辑推理">360智脑</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://baichuan-ai.com/" target="_blank" data-description="百川智能AI助手，代码生成、数学解题、多模态创作">百小应</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://e.doubao.com/" target="_blank" data-description="企业级AI协同平台，支持文档处理、流程自动化">豆包企业版</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://tingwu.aliyun.com/" target="_blank" data-description="语音大模型，实时会议转写、摘要生成">阿里云通义听悟</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://comate.baidu.com/" target="_blank" data-description="AI代码生成工具，支持多语言与端到端开发">百度文心快码</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.huaweicloud.com/kunpeng/" target="_blank" data-description="工业级大模型，聚焦制造、能源、医疗等领域">华为云盘古大模型</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://yanxi.jd.com/" target="_blank" data-description="零售场景专用大模型，智能客服、商品推荐">京东言犀大模型</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://ai.xiaomi.com/" target="_blank" data-description="智能家居+办公场景，语音交互、日程管理">小米小爱大模型</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://ai.meta.com/llama/" target="_blank" data-description="开源大模型，支持多语言与自定义训练">Meta LLaMA 3</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://ai.google.com/" target="_blank" data-description="谷歌多模态大模型，图像、视频、文本综合处理">Google Gemini</a>
+                            <div class="link-description"></div>
+                        </li>
+                    </ul>
                 </div>
-            </section>
 
-            <section class="category">
-                <h2>Business & Finance</h2>
-                <div class="links-grid">
-                    <a href="https://freezenova.com/" class="link-card">
-                        <span class="link-title">FreezeNova</span>
-                        <span class="link-desc">Online Games</span>
-                    </a>
-                    <a href="https://zh-hans.tld-list.com/" class="link-card">
-                        <span class="link-title">顶级域名价格</span>
-                        <span class="link-desc">比较所有顶级域名的价格</span>
-                    </a>
-                    <a href="https://scys.com/" class="link-card">
-                        <span class="link-title">生财有术</span>
-                        <span class="link-desc">实战经验分享</span>
-                    </a>
-                    <a href="https://github.com/" class="link-card">
-                        <span class="link-title">GitHub</span>
-                        <span class="link-desc">软件开发平台</span>
-                    </a>
-                    <a href="https://dash.cloudflare.com/" class="link-card">
-                        <span class="link-title">Cloudflare</span>
-                        <span class="link-desc">网站加速与安全</span>
-                    </a>
-                    <a href="https://www.spaceship.com/zh/" class="link-card">
-                        <span class="link-title">Spaceship</span>
-                        <span class="link-desc">域名与网站托管</span>
-                    </a>
-                    <a href="https://www.toolify.ai/" class="link-card">
-                        <span class="link-title">Toolify.ai</span>
-                        <span class="link-desc">AI工具导航</span>
-                    </a>
-                    <a href="https://analytics.google.com/" class="link-card">
-                        <span class="link-title">Google Analytics</span>
-                        <span class="link-desc">网站数据分析</span>
-                    </a>
-                    <a href="https://search.google.com/search-console" class="link-card">
-                        <span class="link-title">Google Search Console</span>
-                        <span class="link-desc">搜索引擎优化工具</span>
-                    </a>
-                    <a href="https://ip111.cn/" class="link-card">
-                        <span class="link-title">IP查询</span>
-                        <span class="link-desc">显示查询自己的IP地址</span>
-                    </a>
-                    <div class="more-links" style="display: none;">
-                        <a href="https://scys.com/activity" class="link-card">
-                            <span class="link-title">生财有术·实战活动</span>
-                            <span class="link-desc">实战经验分享活动</span>
-                        </a>
-                        <a href="https://scys.com/view/docx/YIvBdL38ConF89xdBvAckZBPn5e" class="link-card">
-                            <span class="link-title">Cursor-零基础做软件应用</span>
-                            <span class="link-desc">实战手册</span>
-                        </a>
-                        <a href="https://scys.com/view/docx/HA9gdKmiLodgznxfwCYc44GtnDf" class="link-card">
-                            <span class="link-title">9月航海|出海工具站</span>
-                            <span class="link-desc">实战手册</span>
-                        </a>
-                        <a href="https://scys.com/view/docx/Aky7dB9TdoZ1oKxUjEkcqjcknpc" class="link-card">
-                            <span class="link-title">3月航海|出海第一站</span>
-                            <span class="link-desc">实战手册</span>
-                        </a>
-                    </div>
-                    <button class="more-button" onclick="toggleMore(this)">Show More</button>
+                <!-- AI开发与技术工具 -->
+                <div class="category-card">
+                    <h3>AI开发与技术</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.paddlepaddle.org.cn/" target="_blank" data-description="百度开源深度学习平台，模型训练+部署全流程">PaddlePaddle飞桨</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://huggingface.co/" target="_blank" data-description="开源模型库，支持NLP、CV、语音处理">Hugging Face</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.tensorflow.org/" target="_blank" data-description="Google机器学习框架，大规模模型训练与部署">TensorFlow</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://pytorch.org/" target="_blank" data-description="动态深度学习框架，科研与工业级应用">PyTorch</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://codedesign.ai/" target="_blank" data-description="AI生成网页代码，支持HTML/CSS/JS快速开发">CodeDesign AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://durable.co/" target="_blank" data-description="零代码建站工具，集成CRM、发票生成等功能">Durable AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://10web.io/" target="_blank" data-description="WordPress AI建站，自动生成内容与响应式设计">10web.io</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://teleporthq.io/" target="_blank" data-description="AI驱动UI/UX设计，Figma插件+代码导出">TeleportHQ</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.midjourney.com/" target="_blank" data-description="AI绘画工具，文本生成高质量图像">MidJourney</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://stablediffusionweb.com/" target="_blank" data-description="开源图像生成模型，支持本地化部署">Stable Diffusion</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://runway.ml/" target="_blank" data-description="多模态创作平台，视频生成、图像编辑">Runway ML</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://dreamstudio.ai/" target="_blank" data-description="Stability AI官方平台，AI绘画+模型微调">DreamStudio</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://lexica.art/" target="_blank" data-description="AI绘画Prompt搜索引擎，快速查找优质提示词">Lexica</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://play.aidungeon.io/" target="_blank" data-description="文本生成游戏，沉浸式AI故事创作">AI地牢</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.semanticscholar.org/" target="_blank" data-description="AI驱动学术搜索，文献分析+引用推荐">Semantic Scholar</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.zotero.org/" target="_blank" data-description="学术文献管理，AI辅助摘要与引用">Zotero AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.grammarly.com/" target="_blank" data-description="智能写作助手，语法检查+风格优化">Grammarly AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.jasper.ai/" target="_blank" data-description="营销文案生成，多语言支持+品牌调性匹配">Jasper AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.copy.ai/" target="_blank" data-description="快速生成广告文案、社交媒体内容">Copy.ai</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.notion.so/product/ai" target="_blank" data-description="嵌入Notion的智能助手，文档生成、会议纪要">Notion AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://otter.ai/" target="_blank" data-description="语音转文字工具，会议记录+实时翻译">Otter.ai</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://descript.com/" target="_blank" data-description="视频编辑AI，自动生成字幕、音频降噪">Descript</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://lumen5.com/" target="_blank" data-description="文本转视频工具，快速生成营销视频">Lumen5</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://resemble.ai/" target="_blank" data-description="语音合成工具，自定义音色与情感表达">Resemble AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://elevenlabs.io/" target="_blank" data-description="高质量AI语音生成，支持多语言与自然对话">ElevenLabs</a>
+                            <div class="link-description"></div>
+                        </li>
+                    </ul>
                 </div>
-            </section>
 
-            <section class="category">
-                <h2>E-commerce</h2>
-                <div class="links-grid">
-                    <a href="https://hi428l7bh89.feishu.cn/docx/XQEyd7EVWouV3kxVYNocouJFnWc" class="link-card">
-                        <span class="link-title">小红书开店课程</span>
-                        <span class="link-desc">配套手册</span>
-                    </a>
-                    <a href="https://detail.1688.com/offer/775067883784.html" class="link-card">
-                        <span class="link-title">VRSTI除臭洗脚液</span>
-                        <span class="link-desc">家用除臭洗脚液</span>
-                    </a>
-                    <a href="https://www.kaogujia.com/productDetails/productOverview/6ln85jhlepc11" class="link-card">
-                        <span class="link-title">创意冰袋</span>
-                        <span class="link-desc">一次性冰袋自封口冰格</span>
-                    </a>
+                <!-- 垂直场景AI工具 -->
+                <div class="category-card">
+                    <h3>垂直场景AI</h3>
+                    <ul>
+                        <li>
+                            <a href="https://chatexcel.com/" target="_blank" data-description="自然语言操作Excel，表格数据自动化">ChatExcel</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://flowus.cn/" target="_blank" data-description="智能笔记+知识库，文档摘要、思维导图生成">FlowUs AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.feishu.cn/" target="_blank" data-description="会议录音转写，AI生成重点摘要">飞书妙记</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://docs.qq.com/" target="_blank" data-description="智能表格分析、文档翻译与校对">腾讯文档AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.wps.cn/" target="_blank" data-description="国产办公软件AI助手，PPT生成、数据可视化">WPS AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.canva.com/" target="_blank" data-description="图形设计工具，智能抠图、文案生成">Canva AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.figma.com/" target="_blank" data-description="设计协作平台，自动生成UI组件、图标">Figma AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.adobe.com/cn/products/firefly.html" target="_blank" data-description="图片/视频AI编辑，版权合规生成">Adobe Firefly</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://manus.im/" target="_blank" data-description="AI驱动UI/UX设计，原型快速生成">Manus</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.cursor.so/" target="_blank" data-description="AI代码编辑器，支持多语言与实时调试">Cursor</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.tabnine.com/" target="_blank" data-description="代码补全工具，基于大模型提升开发效率">Tabnine</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://replit.com/" target="_blank" data-description="在线编程平台，AI辅助代码编写与调试">Replit AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://copilot.github.com/" target="_blank" data-description="Microsoft代码生成助手，支持VS Code集成">GitHub Copilot</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://codeium.com/" target="_blank" data-description="开源AI代码助手，多语言支持+隐私保护">Codeium</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.hubspot.com/" target="_blank" data-description="营销自动化，客户细分、邮件文案生成">HubSpot AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.semrush.com/" target="_blank" data-description="搜索引擎优化，关键词分析、内容策略">SEMrush AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.juniper.ai/" target="_blank" data-description="电商选品工具，市场趋势分析+竞品监控">Juniper AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.adcreative.ai/" target="_blank" data-description="广告创意生成，多平台适配+效果预测">AdCreative AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.hotpot.ai/" target="_blank" data-description="社交媒体内容规划，图文生成+发布日程管理">Hotpot AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://education.openai.com/" target="_blank" data-description="智能学习助手，作业辅导、语言练习">ChatGPT Education</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.duolingo.com/" target="_blank" data-description="语言学习助手，个性化课程规划+实时纠错">多邻国AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://ai.youdao.com/" target="_blank" data-description="翻译+学习工具，文档解析、口语练习">网易有道AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.khanacademy.org/" target="_blank" data-description="免费教育平台，智能答疑+学习路径规划">Khan Academy AI</a>
+                            <div class="link-description"></div>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-        </main>
-    </div>
+            </div>
+        </section>
 
-    <script>
-        function toggleMore(button) {
-            const moreLinks = button.previousElementSibling;
-            const isHidden = moreLinks.style.display === 'none';
-            
-            moreLinks.style.display = isHidden ? 'grid' : 'none';
-            button.textContent = isHidden ? 'Show Less' : 'Show More';
-            
-            if (isHidden) {
-                moreLinks.style.animation = 'fadeIn 0.3s ease-in-out';
-            } else {
-                moreLinks.style.animation = 'fadeOut 0.3s ease-in-out';
-            }
-        }
-    </script>
+        <!-- 创业资源分类 -->
+        <section id="startup" class="section">
+            <h2>创业资源</h2>
+            <div class="category-grid">
+                <!-- 创业服务与社区 -->
+                <div class="category-card">
+                    <h3>创业服务与社区</h3>
+                    <ul>
+                        <li>
+                            <a href="https://scys.com/" target="_blank" data-description="实战派互联网创业社区，流量变现、出海攻略">生财有术</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://36kr.com/" target="_blank" data-description="科技创业资讯，投融资对接、行业报告">36氪</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.cyzone.cn/" target="_blank" data-description="创业孵化平台，赛事活动、导师对接">创业邦</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.huxiu.com/" target="_blank" data-description="商业深度分析，创业案例、趋势解读">虎嗅网</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.iyiou.com/" target="_blank" data-description="产业创新平台，科技创业、政策解读">亿欧网</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://segmentfault.com/" target="_blank" data-description="开发者创业社区，技术交流、项目对接">SegmentFault</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.douban.com/" target="_blank" data-description="小众创业交流，创意分享、资源互换">豆瓣创业小组</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.zhihu.com/" target="_blank" data-description="知识型创业，经验分享、问答互动">知乎创业专栏</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.reddit.com/r/entrepreneur/" target="_blank" data-description="海外创业讨论，跨境电商、SaaS模式">Reddit创业板块</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.indiehackers.com/" target="_blank" data-description="独立开发者社区，小众项目盈利模式">Indie Hackers</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://cy.ncss.org.cn/" target="_blank" data-description="赛事申报、政策补贴">全国大学生创业服务网</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="http://cy.ncss.org.cn/" target="_blank" data-description="国家级创业赛事，资本对接">"互联网+"大赛官网</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="http://cxcyds.chinatorch.gov.cn/" target="_blank" data-description="科技型企业赛道，政府资源扶持">中国创新创业大赛</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.startupgrind.com/" target="_blank" data-description="全球创业社区，线下活动、导师匹配">Startup Grind</a>
+                            <div class="link-description"></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 创业工具与基础设施 -->
+                <div class="category-card">
+                    <h3>创业工具与基础设施</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.godaddy.com/" target="_blank" data-description="域名注册与托管，一站式建站工具">GoDaddy</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.namecheap.com/" target="_blank" data-description="性价比域名服务，隐私保护">Namecheap</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.hostinger.com/" target="_blank" data-description="AI建站工具，零代码生成+电商支持">Hostinger</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.wix.com/" target="_blank" data-description="可视化建站平台，模板丰富+App集成">Wix</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.shopify.com/" target="_blank" data-description="电商独立站建站，全流程销售管理">Shopify</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.aliyun.com/" target="_blank" data-description="云计算+服务器，创业企业基础架构">阿里云</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://cloud.tencent.com/" target="_blank" data-description="弹性计算+数据库，中小企业首选">腾讯云</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://aws.amazon.com/cn/" target="_blank" data-description="全球云服务，出海项目部署">AWS</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://dash.cloudflare.com/" target="_blank" data-description="CDN加速+安全防护，域名解析">Cloudflare</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.digitalocean.com/" target="_blank" data-description="开发者友好云主机，低成本创业">DigitalOcean</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://analytics.google.com/" target="_blank" data-description="网站流量分析，用户行为追踪">Google Analytics</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://search.google.com/search-console" target="_blank" data-description="搜索引擎优化，站点健康监测">Google Search Console</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://mixpanel.com/" target="_blank" data-description="产品用户分析，事件追踪+漏斗模型">Mixpanel</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://ahrefs.com/" target="_blank" data-description="SEO工具，关键词研究+竞品分析">Ahrefs</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.similarweb.com/" target="_blank" data-description="网站流量对标，市场份额分析">SimilarWeb</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.feishu.cn/" target="_blank" data-description="一站式协作平台，文档+会议+项目管理">飞书</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.notion.so/" target="_blank" data-description="模块化笔记，团队知识库+流程管理">Notion</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://trello.com/" target="_blank" data-description="看板工具，项目进度可视化">Trello</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://asana.com/" target="_blank" data-description="任务管理平台，跨团队协作">Asana</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.atlassian.com/software/jira" target="_blank" data-description="敏捷开发工具，Bug追踪+版本控制">Jira</a>
+                            <div class="link-description"></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 投融资与孵化支持 -->
+                <div class="category-card">
+                    <h3>投融资与孵化</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.angelcrunch.com/" target="_blank" data-description="早期项目对接，天使投资人网络">天使汇</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.trjcn.com/" target="_blank" data-description="中小企业融资，债权/股权对接">投融界</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.itjuzi.com/" target="_blank" data-description="创业公司数据库，融资事件查询">IT桔子</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.crunchbase.com/" target="_blank" data-description="全球企业信息，融资动态追踪">Crunchbase</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.pedata.cn/" target="_blank" data-description="行业报告+投资数据，机构对接">清科研究中心</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://ai.baidu.com/accelerator" target="_blank" data-description="技术赋能，大模型资源+创业培训">百度AI加速器</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://zhongchuang.qq.com/" target="_blank" data-description="物理空间+流量扶持，全周期孵化">腾讯众创空间</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://chuangxin.aliyun.com/" target="_blank" data-description="云资源补贴，创业大赛对接">阿里云创新中心</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.chuangxin.com/" target="_blank" data-description="李开复旗下孵化器，AI领域深度扶持">创新工场</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.ycombinator.com/" target="_blank" data-description="海外顶级孵化器，种子轮融资+资源网络">Y Combinator</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.qcc.com/" target="_blank" data-description="企业信息查询，工商/知识产权监控">企查查</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.tianyancha.com/" target="_blank" data-description="企业信息查询，工商/知识产权监控">天眼查</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.aliyun.com/oss" target="_blank" data-description="企业文件存储，数据安全合规">阿里云OSS</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://dianziqian.qq.com/" target="_blank" data-description="合同在线签署，法律合规保障">腾讯电子签</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.yonyou.com/" target="_blank" data-description="财务软件，中小企业记账报税">用友</a>
+                            <div class="link-description"></div>
+                        </li>
+                        <li>
+                            <a href="https://www.kingdee.com/" target="_blank" data-description="财务软件，中小企业记账报税">金蝶</a>
+                            <div class="link-description"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 AI 创业导航站 | 让创业更简单</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html> 
